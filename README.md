@@ -1,3 +1,21 @@
+# Docker To-Do List App
+This repository contains the Docker image for the "To-Do List app."
+
+## Docker Hub Image
+
+You can find the Docker image on Docker Hub [here](https://hub.docker.com/repository/docker/mdfurquan313/getting-started2.0/general).
+
+### Pulling the Docker Image
+
+To pull the Docker image, run the following command:
+
+```sh
+docker pull mdfurquan313/getting-started2.0:tagname
+```
+---
+
+
+---
 # Docker_To_Do_List_app
 I have created docker image of "To Do List app".
  
