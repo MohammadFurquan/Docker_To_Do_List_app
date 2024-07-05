@@ -1,4 +1,5 @@
 # Docker To-Do List App
+
 This repository contains the Docker image for the "To-Do List app."
 
 ## Docker Hub Image
@@ -12,9 +13,30 @@ To pull the Docker image, run the following command:
 ```sh
 docker pull mdfurquan313/getting-started2.0:tagname
 ```
+Replace tagname with the specific tag you want to use.
+
+### Running the Docker Image
+To run the Docker image, execute the following command:
+
+## Step 1: Clone the Repository
+Using Git:
+```sh
+git clone https://github.com/MohammadFurquan/Docker_To_Do_List_app.git
+```
+Or download the repository as a ZIP file and extract it.
+
+## Step 2: Navigate to the Repository Folder
+Open a terminal and navigate to the folder where the repository is located:
+```sh
+cd Docker_To_Do_List_app/getting-started
+```
+## Step 3: Build the Docker Image
+Run the following command to build the Docker image:
+```sh
+docker build -t <image_name> .
+```
+Replace <image_name> with the desired name for your Docker image.
 ---
-
-
 ---
 # Docker_To_Do_List_app
 I have created docker image of "To Do List app".
