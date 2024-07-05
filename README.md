@@ -13,7 +13,6 @@ To pull the Docker image, run the following command:
 ```sh
 docker pull mdfurquan313/getting-started2.0:tagname
 ```
-Replace tagname with the specific tag you want to use.
 
 ### Running the Docker Image
 To run the Docker image, execute the following command:
@@ -35,7 +34,60 @@ Run the following command to build the Docker image:
 ```sh
 docker build -t <image_name> .
 ```
-Replace <image_name> with the desired name for your Docker image.
+
+
+## Step 4: Verify the Docker Image
+Check the built image using the following command:
+
+```sh
+docker image ls
+```
+## Step 5: Run the Docker Image
+Run the following command to start the Docker image:
+
+```sh
+docker run -dp 3000:80 <image_name>
+```
+
+## Project Details
+In this image, I have used two Docker images: one for the To-Do List application and one for MySQL, which I pulled from Docker Hub. I created a network between them, mounted volumes, and then composed both images.
+
+## Docker Compose
+You can use Docker Compose to run the application and the database together. Here is an example docker-compose.yml file:-
+```sh
+version: '3.1'
+
+services:
+
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: todo
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+
+  app:
+    image: mdfurquan313/getting-started2.0:tagname
+    ports:
+      - "3000:80"
+    depends_on:
+      - db
+
+volumes:
+  db_data:
+```
+## Files in this Repository
+- *'Dockerfile'* : Defines the Docker image for the To-Do List application.
+- *'docker-compose.yml'*: Example Docker Compose file to run the application and MySQL together.
+- *'app.py'*: The application script.
+- *'requirements.txt'*: Lists the Python dependencies for the application.
+
+
+
+
 ---
 ---
 # Docker_To_Do_List_app
