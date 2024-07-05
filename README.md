@@ -80,10 +80,10 @@ volumes:
   db_data:
 ```
 ## Files in this Repository
-- *'Dockerfile'* : Defines the Docker image for the To-Do List application.
-- *'docker-compose.yml'*: Example Docker Compose file to run the application and MySQL together.
-- *'app.py'*: The application script.
-- *'requirements.txt'*: Lists the Python dependencies for the application.
+- *`Dockerfile`* : Defines the Docker image for the To-Do List application.
+- *`docker-compose.yml`*: Example Docker Compose file to run the application and MySQL together.
+- *`app.py`*: The application script.
+- *`requirements.txt`*: Lists the Python dependencies for the application.
 
 ## Contribution 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or new features.
